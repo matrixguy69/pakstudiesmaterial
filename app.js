@@ -89,14 +89,25 @@ for(let i=1; i<=50; i++) {
 }
 
 function switchTab(id, btn) {
-    gsap.to('.panel', { opacity: 0, y: 15, duration: 0.2, onComplete: () => {
-        document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
-        document.getElementById('tab-' + id).classList.add('active');
-        gsap.to('#tab-' + id, { opacity: 1, y: 0, duration: 0.4 });
-    }});
+    // 1. Force hide EVERYTHING first
+    document.querySelectorAll('.panel').forEach(p => {
+        p.style.display = 'none'; 
+        p.classList.remove('active');
+    });
+
+    // 2. Show ONLY the target
+    const target = document.getElementById('tab-' + id);
+    target.style.display = 'block';
+    target.classList.add('active');
+
+    // 3. FORCE the scrollbar back to the top
+    document.querySelector('.viewport').scrollTop = 0;
+
+    // 4. Update Nav UI
     document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
     btn.classList.add('active');
-    if(id === 'db') filter('s1', document.querySelector('.f-pill'));
+
+    // 5. Only render what is needed
     if(id === 'drill') renderDrills();
 }
 
