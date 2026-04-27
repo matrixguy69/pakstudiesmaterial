@@ -3,59 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Blurix | Pak Studies CIE</title>
+    <title>MATRIX404 | Pak Studies</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body class="dark"> <div class="app-container">
-        <header class="header">
-            <div class="logo">BLURIX<span>.STUDY</span></div>
-            <button id="theme-toggle" onclick="toggleTheme()" aria-label="Toggle Theme">🌙</button>
+<body class="dark-theme">
+    <div class="animated-bg">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+    </div>
+
+    <div class="glass-wrapper">
+        <header class="main-nav">
+            <h1 class="brand">MATRIX404<span>.HIST</span></h1>
+            <div class="nav-links">
+                <button class="nav-btn active" onclick="showPanel('exams', this)">EXAM OPS</button>
+                <button class="nav-btn" onclick="showPanel('topics', this)">DATABASE</button>
+                <button class="nav-btn" onclick="showPanel('practice', this)">DRILLS</button>
+            </div>
         </header>
 
-        <nav class="tabs-container">
-            <div class="tabs">
-                <button class="tab active" onclick="switchTab('how', this)">Writing</button>
-                <button class="tab" onclick="switchTab('s1', this)">Sec 1</button>
-                <button class="tab" onclick="switchTab('s2', this)">Sec 2</button>
-                <button class="tab" onclick="switchTab('s3', this)">Sec 3</button>
-                <button class="tab" onclick="switchTab('practice', this)">Practice</button>
-            </div>
-        </nav>
-
-        <main class="content">
-            <section id="panel-how" class="panel active">
-                <div class="section-label">CIE Exam Strategy</div>
-                <div class="info-card">
-                    <h4>Paper Structure</h4>
-                    <p>Sec A: 25m (Compulsory) | Sec B: 50m (2 of 4)</p>
-                </div>
-                <div class="tip-box">
-                    <strong>Developed Point:</strong> Fact + Reason + Impact. Minimum 5-6 lines per point.
-                </div>
-                <div class="info-card">
-                    <h4>Level 5 (14 Marks)</h4>
-                    <p>Intro + 3 DPs (Side A) + 3 DPs (Side B) + Evaluation (Fresh Reason).</p>
+        <main class="main-content">
+            <section id="panel-exams" class="panel active">
+                <h2 class="panel-title">CIE 2059/01 PROTOCOLS</h2>
+                <div class="grid">
+                    <div class="glass-card exam-card">
+                        <span class="badge">7 MARKS</span>
+                        <h3>Development Strategy</h3>
+                        <p>Requires 2-3 **Developed Points**. Each point must follow: Fact → Reason → Direct Impact on the question.</p>
+                    </div>
+                    <div class="glass-card exam-card">
+                        <span class="badge">14 MARKS</span>
+                        <h3>Level 5 Evaluation</h3>
+                        <p>Balanced argument (Both Sides) + a "Fresh Reason" in evaluation. Do not just summarize.</p>
+                    </div>
                 </div>
             </section>
 
-            <section id="panel-s1" class="panel">
-                <input type="text" class="search-bar" placeholder="Search Section 1..." onkeyup="filterTopics('s1', this.value)">
-                <div id="s1-topics-list" class="topics-grid"></div>
-            </section>
-
-            <section id="panel-s2" class="panel">
-                <input type="text" class="search-bar" placeholder="Search Section 2..." onkeyup="filterTopics('s2', this.value)">
-                <div id="s2-topics-list" class="topics-grid"></div>
-            </section>
-
-            <section id="panel-s3" class="panel">
-                <input type="text" class="search-bar" placeholder="Search Section 3..." onkeyup="filterTopics('s3', this.value)">
-                <div id="s3-topics-list" class="topics-grid"></div>
+            <section id="panel-topics" class="panel">
+                <div class="controls">
+                    <div class="tab-row">
+                        <button class="sub-tab active" onclick="filterData('s1', this)">SEC 1</button>
+                        <button class="sub-tab" onclick="filterData('s2', this)">SEC 2</button>
+                        <button class="sub-tab" onclick="filterData('s3', this)">SEC 3</button>
+                    </div>
+                    <input type="text" id="db-search" placeholder="Search the archives..." onkeyup="searchDB()">
+                </div>
+                <div id="topic-container"></div>
             </section>
 
             <section id="panel-practice" class="panel">
-                <div class="section-label">Model Answers</div>
-                <div id="practice-list"></div>
+                <h2 class="panel-title">LIVE DRILLS</h2>
+                <div id="practice-container"></div>
             </section>
         </main>
     </div>
