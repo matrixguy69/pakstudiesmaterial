@@ -3,26 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MATRIX 404 | COMPLETE 55 CHAPTERS</title>
+    <title>MATRIX 55 | ULTIMATE ARCHIVE</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;700&display=swap" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 </head>
 <body>
     <div class="mesh-bg"></div>
     <div class="glass-shell">
         <header class="header">
-            <div class="brand">MATRIX<span>404</span></div>
+            <div class="brand">MATRIX<span>55</span></div>
             <nav class="nav">
-                <button class="nav-btn active" onclick="switchTab('db', this)">DATABASE</button>
-                <button class="nav-btn" onclick="switchTab('drill', this)">PRACTICE</button>
+                <button class="nav-btn active" onclick="switchTab('ops', this)">PATTERN</button>
+                <button class="nav-btn" onclick="switchTab('db', this)">DB</button>
+                <button class="nav-btn" onclick="switchTab('drill', this)">VAULT</button>
             </nav>
         </header>
 
         <main class="viewport">
-            <section id="tab-db" class="panel active">
+            <section id="tab-ops" class="panel active">
+                <div class="card glass intro-card">
+                    <span class="badge">PAPER 1 PROTOCOL</span>
+                    <h2>The 3-Page 14-Marker Formula</h2>
+                    <div class="pattern-grid">
+                        <div class="p-item"><strong>Para 1:</strong> 3 DPs on the factor in the question.</div>
+                        <div class="p-item"><strong>Para 2:</strong> 3 DPs on 1st alternative factor.</div>
+                        <div class="p-item"><strong>Para 3:</strong> 3 DPs on 2nd alternative factor.</div>
+                        <div class="p-item"><strong>Conclusion:</strong> The "7th Point" (Evaluation).</div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="tab-db" class="panel">
                 <div class="controls">
-                    <input type="text" id="search" placeholder="Search 55 Chapters..." onkeyup="search()">
+                    <input type="text" id="search" placeholder="Search Chapters..." onkeyup="search()">
                     <div class="filter-bar">
                         <button class="f-pill active" onclick="filter('s1', this)">SEC 1</button>
                         <button class="f-pill" onclick="filter('s2', this)">SEC 2</button>
@@ -34,9 +48,6 @@
             </section>
 
             <section id="tab-drill" class="panel">
-                <div class="vault-header">
-                    <h3>Practice Vault (2002-2025)</h3>
-                </div>
                 <div id="drill-render"></div>
             </section>
         </main>
