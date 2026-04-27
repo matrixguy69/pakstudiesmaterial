@@ -6,54 +6,50 @@
     <title>MATRIX404 | Pak Studies</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body class="dark-theme">
-    <div class="animated-bg">
-        <div class="blob blob-1"></div>
-        <div class="blob blob-2"></div>
+<body>
+    <div class="bg-animation">
+        <div class="blob"></div>
+        <div class="blob"></div>
     </div>
 
-    <div class="glass-wrapper">
-        <header class="main-nav">
-            <h1 class="brand">MATRIX404<span>.HIST</span></h1>
-            <div class="nav-links">
-                <button class="nav-btn active" onclick="showPanel('exams', this)">EXAM OPS</button>
-                <button class="nav-btn" onclick="showPanel('topics', this)">DATABASE</button>
-                <button class="nav-btn" onclick="showPanel('practice', this)">DRILLS</button>
+    <div class="glass-shell">
+        <header class="top-nav">
+            <h1 class="logo">MATRIX404<span>.HIST</span></h1>
+            <div class="nav-tabs">
+                <button class="nav-link active" onclick="showTab('exams', this)">EXAM OPS</button>
+                <button class="nav-link" onclick="showTab('db', this)">DATABASE</button>
+                <button class="nav-link" onclick="showTab('drills', this)">DRILLS</button>
             </div>
         </header>
 
-        <main class="main-content">
+        <main class="main-frame">
             <section id="panel-exams" class="panel active">
-                <h2 class="panel-title">CIE 2059/01 PROTOCOLS</h2>
-                <div class="grid">
-                    <div class="glass-card exam-card">
-                        <span class="badge">7 MARKS</span>
-                        <h3>Development Strategy</h3>
-                        <p>Requires 2-3 **Developed Points**. Each point must follow: Fact → Reason → Direct Impact on the question.</p>
-                    </div>
-                    <div class="glass-card exam-card">
-                        <span class="badge">14 MARKS</span>
-                        <h3>Level 5 Evaluation</h3>
-                        <p>Balanced argument (Both Sides) + a "Fresh Reason" in evaluation. Do not just summarize.</p>
-                    </div>
+                <div class="glass-card glow-blue">
+                    <span class="tag">PRO TIPS</span>
+                    <h2>CIE 2059/01 Protocols</h2>
+                    <p>To hit 14/14, you need a <strong>balanced argument</strong> + a <strong>Fresh Reason</strong> in the evaluation.</p>
+                </div>
+                <div class="glass-card">
+                    <h3>Writing a "Developed Point" (DP)</h3>
+                    <p>Fact + Evidence + Impact. Example: <em>"The Doctrine of Lapse (Fact) allowed British to seize Jhansi (Evidence), which humiliated local rulers and forced them to join the 1857 revolt (Impact)."</em></p>
                 </div>
             </section>
 
-            <section id="panel-topics" class="panel">
-                <div class="controls">
-                    <div class="tab-row">
-                        <button class="sub-tab active" onclick="filterData('s1', this)">SEC 1</button>
-                        <button class="sub-tab" onclick="filterData('s2', this)">SEC 2</button>
-                        <button class="sub-tab" onclick="filterData('s3', this)">SEC 3</button>
-                    </div>
-                    <input type="text" id="db-search" placeholder="Search the archives..." onkeyup="searchDB()">
+            <section id="panel-db" class="panel">
+                <div class="search-wrap">
+                    <input type="text" id="master-search" placeholder="Search 55 Chapters..." onkeyup="search()">
                 </div>
-                <div id="topic-container"></div>
+                <div class="sub-nav">
+                    <button class="sub-link active" onclick="filterSec('s1', this)">SEC 1</button>
+                    <button class="sub-link" onclick="filterSec('s2', this)">SEC 2</button>
+                    <button class="sub-link" onclick="filterSec('s3', this)">SEC 3</button>
+                    <button class="sub-link" onclick="filterSec('fr', this)">RELATIONS</button>
+                </div>
+                <div id="db-list"></div>
             </section>
 
-            <section id="panel-practice" class="panel">
-                <h2 class="panel-title">LIVE DRILLS</h2>
-                <div id="practice-container"></div>
+            <section id="panel-drills" class="panel">
+                <div id="drill-list"></div>
             </section>
         </main>
     </div>
