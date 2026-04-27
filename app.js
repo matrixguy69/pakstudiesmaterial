@@ -1,126 +1,120 @@
 const topics = {
     s1: [
-        { title: "1. Decline of Mughal Empire", facts: "Aurangzeb's death in 1707 began the end. Pleasure-seeking emperors like Bahadur Shah I wasted the treasury.", reason: "Mansabdari system corruption, succession wars, and Persian invasions (Nadir Shah).", impact: "The weakening of central power allowed the East India Company to fill the vacuum.", dp: "The Battle of Buxar (1764) consolidated British political control after the Mughal collapse." },
-        { title: "2. East India Company", facts: "Started as traders in 1600. Used Doctrine of Lapse to annex states.", reason: "Mughal weakness and the need for raw materials for the Industrial Revolution.", impact: "By 1850, the EIC controlled almost all of the subcontinent.", dp: "Robert Clive's victories secured the Diwani of Bengal, giving British total financial control." },
-        { title: "3. War of Independence 1857", facts: "Began in Meerut. Greased cartridges used pig/cow fat.", reason: "Political (Doctrine of Lapse), Social (Western Education), and Religious interference.", impact: "End of EIC rule; Crown took control. Mughal Empire officially ended.", dp: "The capture of Delhi and exile of Bahadur Shah Zafar marked the end of 300 years of Mughal rule." },
-        { title: "4. Reformers", facts: "Shah Waliullah translated Quran to Persian. Syed Ahmed Barelvi led Jihad movement.", reason: "Muslims were losing religious purity and political power.", impact: "Restored pride and unity among Muslims during the British rise.", dp: "Shah Waliullah's call to Ahmed Shah Abdali saved Muslims from Maratha dominance at Panipat." },
-        { title: "5. Sir Syed Ahmed Khan", facts: "Founded Aligarh College (1875). Wrote 'The Causes of the Indian Revolt'.", reason: "Believed Muslims would fail without Western education and English.", impact: "Created a loyal educated class; Two-Nation Theory.", dp: "The Urdu-Hindi controversy (1867) convinced him that Hindus and Muslims could not share a single state." },
-        { title: "6. Languages", facts: "Urdu vs Hindi controversy in 1867. British favored Hindi in some regions.", reason: "Hindu nationalists wanted to remove Persian/Arabic influence.", impact: "Identified language as a core part of national identity.", dp: "Sir Syed's defense of Urdu laid the foundation for the Two-Nation Theory." }
+        { id: 1, title: "Decline of Mughal Empire", points: "Later Mughals were pleasure-seekers (drinking, music). Succession wars drained the treasury.", dp: "The Battle of Buxar (1764) confirmed British political control over the weakening Mughal structure." },
+        { id: 2, title: "East India Company", points: "Trade expanded into political control via the Doctrine of Lapse.", dp: "By 1850, EIC controlled almost all of India due to military superior technology." },
+        { id: 3, title: "War of Independence 1857", points: "Greased cartridges (cow/pig fat) + excessive taxation.", dp: "The failure led to the 'Crown Rule' and the final end of the Mughal line." },
+        { id: 4, title: "Reformers", points: "Shah Waliullah translated Quran to Persian; Barelvi led Jihad.", dp: "Saved Muslim identity from being absorbed by Marathas/Sikhs." },
+        { id: 5, title: "Sir Syed Ahmed Khan", points: "Aligarh Movement; Urdu-Hindi controversy (1867).", dp: "His Two-Nation Theory provided the base for the future Pakistan demand." },
+        { id: 6, title: "Languages", points: "Promotion of Urdu as a symbol of Muslim unity.", dp: "Used as a tool for national identity during the independence movement." }
     ],
     s2: [
-        { title: "7. Partition of Bengal 1905", facts: "Lord Curzon divided Bengal. East Bengal had Muslim majority.", reason: "Administrative convenience (54m population). Divide & Rule strategy.", impact: "Swadeshi movement (boycott) by Hindus. Muslim joy.", dp: "The 1911 reversal of this partition proved to Muslims that they needed their own political party." },
-        { title: "8. Simla Deputation 1906", facts: "35 leaders met Lord Minto. Requested Separate Electorates.", reason: "Fear of being outvoted by Hindu majority in future reforms.", impact: "Separate electorates granted in 1909.", dp: "This was the first formal success of the Two-Nation Theory in British policy." },
-        { title: "9. Muslim League 1906", facts: "Founded in Dacca. Nawab Salimullah was key.", reason: "Need to protect Muslim political rights after the Bengal crisis.", impact: "Gave Muslims a unified voice for the first time.", dp: "The ML became the main vehicle for the demand for Pakistan." },
-        { title: "10. Reforms (1909-1935)", facts: "Minto-Morley (1909), Montagu-Chelmsford (1919), GOI Act (1935).", reason: "Rising Indian nationalism and demand for self-rule.", impact: "Gradual shift to provincial autonomy.", dp: "The 1935 Act set the stage for the 1937 elections which proved Congress's bias." },
-        { title: "11. Lucknow Pact 1916", facts: "Agreement between Congress and ML. Congress accepted Separate Electorates.", reason: "Desire for a united front against the British during WWI.", impact: "Peak of Hindu-Muslim unity.", dp: "Jinnah earned the title 'Ambassador of Hindu-Muslim Unity' through this pact." },
-        { title: "12. Non-Cooperation Movement 1920", facts: "Gandhi's boycott of British goods and titles.", reason: "Response to Rowlatt Act and Jallianwala Bagh.", impact: "Mass mobilization; but suspended after Chauri Chaura violence.", dp: "Suspension without consulting Muslims broke the trust in the Khilafat-Congress alliance." },
-        { title: "13. Khilafat Movement 1919", facts: "Ali Brothers led movement to protect the Ottoman Caliph.", reason: "Religious attachment to the Caliphate after WWI.", impact: "United Muslims; taught them political activism.", dp: "Though the Caliphate was abolished by Turks, it created the mass momentum for the Pakistan movement." },
-        { title: "14. Delhi Proposals 1927", facts: "Jinnah offered to drop separate electorates for certain safeguards.", reason: "Attempt to find middle ground with Congress.", impact: "Congress rejected it, leading to the Nehru Report.", dp: "The rejection pushed Jinnah to formulate his 14 Points." },
-        { title: "15. Simon Commission 1927", facts: "All-British commission to review reforms.", reason: "Determine future constitutional steps.", impact: "Boycotted by most Indians; led to Nehru Report.", dp: "The exclusion of Indians was seen as a direct insult to local political capacity." },
-        { title: "16. Nehru Report 1928", facts: "Proposed joint electorates and a secular India.", reason: "Congress vision for future India.", impact: "Rejected by Muslims; ended the era of cooperation.", dp: "It proved that Congress wanted 'Ram Raj' where Muslims would be dominated." },
-        { title: "17. Jinnah's 14 Points 1929", facts: "Demanded federal system and separate electorates.", reason: "Response to the Nehru Report's anti-Muslim stance.", impact: "Became the 'Minimum Demands' for Muslims.", dp: "This document unified all Muslim factions under Jinnah's leadership." },
-        { title: "18. Salt March 1930", facts: "Gandhi's march to Dandi to break the salt law.", reason: "Protest against British economic monopoly.", impact: "Global attention; mass arrests.", dp: "It forced the British to hold the Round Table Conferences to solve the deadlock." },
-        { title: "19. Round Table Conferences 1930-32", facts: "Three meetings in London. Gandhi only attended the 2nd.", reason: "To reach an agreed constitution for India.", impact: "Failed to find consensus; led to Communal Award.", dp: "The failure proved that Hindu and Muslim visions were fundamentally different." },
-        { title: "20. Iqbal's Allahabad Address 1930", facts: "Iqbal proposed a separate state in the North-West.", reason: "Believed Muslims needed a territory to protect their culture.", impact: "Provided the vision/philosophy for Pakistan.", dp: "Iqbal transformed the demand from 'rights' to a 'homeland'." },
-        { title: "21. Rehmat Ali & Now or Never", facts: "Coined the name 'Pakistan' in 1933.", reason: "Felt the RTC leaders were ignoring the need for a separate nation.", impact: "Gave the movement a powerful name and identity.", dp: "Initially dismissed as a 'student's dream', it soon became the goal of millions." },
-        { title: "22. Elections 1937 & Congress Rule", facts: "ML lost; Congress ruled 7 provinces. Wardha Scheme introduced.", reason: "ML was unorganized; Congress was better funded.", impact: "Muslims were oppressed (Bande Mataram); led to Day of Deliverance.", dp: "The 27 months of Congress rule convinced every Muslim that Pakistan was necessary." },
-        { title: "23. Pakistan Resolution 1940", facts: "Passed at Minto Park, Lahore. Demanded sovereign states.", reason: "Failure of Congress Rule (1937-39).", impact: "Pakistan became the official goal of the ML.", dp: "It was the first democratic mandate for a new country in the subcontinent." },
-        { title: "24. Cripps Mission 1942", facts: "Offered Dominion Status after WWI.", reason: "British needed India's help against Japan.", impact: "Rejected by both Congress and ML.", dp: "The mission was the first time the British admitted 'Partition' was possible (Opt-out clause)." },
-        { title: "25. Gandhi-Jinnah Talks 1944", facts: "Met in Bombay. Gandhi rejected the 2-Nation Theory.", reason: "Attempt to solve the deadlock before British left.", impact: "Failed; proved that only Partition could solve the issue.", dp: "The talks elevated Jinnah's status as the sole spokesman for Muslims." },
-        { title: "26. Simla Conference 1945", facts: "Lord Wavell proposed parity in the cabinet.", reason: "Form an interim government.", impact: "Failed because Jinnah insisted ML must pick all Muslim members.", dp: "The failure proved ML's total control over the Muslim mandate." },
-        { title: "27. Elections 1945-46", facts: "ML won all Central Muslim seats and 90% of Provincial ones.", reason: "Effective organization and 'Pakistan' slogan.", impact: "Confirmed ML's mandate for Pakistan.", dp: "The results made the creation of Pakistan inevitable." },
-        { title: "28. Cabinet Mission Plan 1946", facts: "Proposed grouping provinces (A, B, C). ML accepted; Congress didn't.", reason: "Last attempt to keep India united.", impact: "Failure led to Direct Action Day.", dp: "Nehru's statement that Congress could change the plan killed the last hope of unity." },
-        { title: "29. Direct Action Day 1946", facts: "Aug 16. Great Calcutta Killings (4000+ dead).", reason: "ML wanted to show the British that Partition was the only way.", impact: "Forced the British to speed up their departure.", dp: "The communal violence proved that Hindus and Muslims could no longer live together." },
-        { title: "30. June 3 Plan 1947", facts: "Mountbatten announced the Partition date.", reason: "India was on the brink of a full civil war.", impact: "Creation of India and Pakistan.", dp: "The rushed 10nd-week timeline caused the greatest migration in history." },
-        { title: "31. Radcliffe Commission 1947", facts: "Cyril Radcliffe drew the borders in 5 weeks.", reason: "Determine majority areas for each nation.", impact: "Gave Gurdaspur to India (Kashmir link); caused massive riots.", dp: "The 'Radcliffe Award' was seen as biased towards India by many Pakistanis." },
-        { title: "32. Independence Act 1947", facts: "Legal transfer of power from British to India/Pakistan.", reason: "End British colonial rule.", impact: "Two sovereign dominions created.", dp: "It ended 200 years of British presence but left the Princely States' future vague." }
+        { id: 7, title: "Partition of Bengal 1905", points: "Bengal was too large (54M west, 31M east).", dp: "Hindus' Swadeshi movement forced the 1911 reversal, shocking Muslims." },
+        { id: 8, title: "Simla Deputation 1906", points: "35 leaders met Lord Minto for Separate Electorates.", dp: "First formal acceptance of the Two-Nation Theory by the British." },
+        { id: 9, title: "Creation of Muslim League 1906", points: "Nawab Salimullah (Dacca). Protect Muslim rights.", dp: "Became the sole political voice for the Muslims of India." },
+        { id: 10, title: "Reforms (1909-1935)", points: "Minto-Morley (1909), Montagu-Chelmsford (1919).", dp: "Each step proved that the Congress and League had different goals." },
+        { id: 11, title: "Lucknow Pact 1916", points: "Peak Hindu-Muslim unity. Congress accepted Separate Electorates.", dp: "Jinnah earned the title 'Ambassador of Hindu-Muslim Unity'." },
+        { id: 12, title: "Non-Cooperation Movement 1920", points: "Gandhi's boycott. Swaraj demand.", dp: "Failure after Chauri Chaura broke the trust of the Muslims." },
+        { id: 13, title: "Khilafat Movement 1919", points: "Ali Brothers. Protect the Ottoman Caliph.", dp: "Failed religiously but taught Muslims massive political mobilization." },
+        { id: 14, title: "Delhi Proposals 1927", points: "Jinnah offered to drop separate electorates for certain safeguards.", dp: "Rejection led to the Nehru Report and Jinnah's 14 Points." },
+        { id: 15, title: "Simon Commission 1927", points: "All-British commission. Boycotted by India.", dp: "Showed British arrogance in deciding India's fate without Indians." },
+        { id: 16, title: "Nehru Report 1928", points: "Proposed joint electorates and a secular India.", dp: "Proved Congress wanted to dominate the Muslim minority." },
+        { id: 17, title: "Jinnah's 14 Points 1929", points: "Federal system + 1/3rd Muslim representation.", dp: "The 'Minimum Demands' that unified all Muslim factions." },
+        { id: 18, title: "Salt March 1930", points: "Gandhi's Civil Disobedience. Mass arrests.", dp: "Forced the British to negotiate at the Round Table Conferences." },
+        { id: 19, title: "Round Table Conferences (1930-32)", points: "Three sessions. Failure to agree on minorities.", dp: "Proved that no constitution could work without separate nations." },
+        { id: 20, title: "Iqbal's Allahabad Address 1930", points: "First vision of a North-Western Muslim state.", dp: "Changed the movement from 'rights' to 'territory'." },
+        { id: 21, title: "Rehmat Ali & PNM 1933", points: "Coined the name 'PAKISTAN'.", dp: "Gave a concrete name to the abstract vision of Iqbal." },
+        { id: 22, title: "Elections 1937 & Congress Rule", points: "Wardha Scheme. Bande Mataram. Muslim oppression.", dp: "The 27 months of rule convinced Muslims that 'Partition' was the only way." },
+        { id: 23, title: "Pakistan Resolution 1940", points: "Minto Park. Demand for sovereign states.", dp: "Official adoption of Pakistan as the final goal of the Muslim League." },
+        { id: 24, title: "Cripps Mission 1942", points: "Offered Dominion status after the war.", dp: "First time British admitted 'Opt-out' (Partition) was possible." },
+        { id: 25, title: "Gandhi-Jinnah Talks 1944", points: "Met in Bombay. Gandhi rejected 2-Nation Theory.", dp: "Elevated Jinnah to the status of the 'Sole Spokesman' for Muslims." },
+        { id: 26, title: "Simla Conference 1945", points: "Lord Wavell. Interim government plan.", dp: "Failed because Jinnah insisted ML must pick all Muslim members." },
+        { id: 27, title: "Elections 1945-46", points: "ML won 100% central Muslim seats.", dp: "Legally proved that the Muslim League represented the Muslims." },
+        { id: 28, title: "Cabinet Mission Plan 1946", points: "Grouping of provinces (A, B, C).", dp: "Last chance for a united India; killed by Nehru’s statements." },
+        { id: 29, title: "Direct Action Day 1946", points: "Great Calcutta Killings (4000 dead).", dp: "Showed that a united India would result in a bloody civil war." },
+        { id: 30, title: "June 3 Plan 1947", points: "Partition announced by Mountbatten.", dp: "The formal blueprint for the creation of Pakistan and India." },
+        { id: 31, title: "Radcliffe Commission 1947", points: "Awarded Gurdaspur to India (Kashmir link).", dp: "The biased border created the perpetual Kashmir conflict." },
+        { id: 32, title: "Independence Act 1947", points: "End of British rule. Creation of two Dominions.", dp: "Birth of Pakistan as a sovereign state." }
     ],
     s3: [
-        { title: "33. Jinnah as Governor General", facts: "Secured UN membership; Chose Karachi as capital.", reason: "Needed to build state infrastructure from zero.", impact: "United the nation during the refugee crisis.", dp: "His 11 Aug address declared Pakistan a land of equal rights for all religions." },
-        { title: "34. Liaqat Ali Khan (1949-51)", facts: "Objectives Resolution (1949). Assassinated in 1951.", reason: "Set the Islamic framework for the constitution.", impact: "Permanent Islamic character of Pakistan's law.", dp: "The Objectives Resolution remains the preamble of every Pakistan constitution." },
-        { title: "35. Malik Ghulam Muhammad (1951-55)", facts: "Dismissed PM Nazimuddin using discretionary powers.", reason: "Power struggle between the bureaucracy and parliament.", impact: "Set a precedent for undemocratic dismissals.", dp: "This era marked the beginning of bureaucratic interference in politics." },
-        { title: "36. Iskandar Mirza (1955-58)", facts: "First President. One Unit Scheme. Imposed Martial Law.", reason: "Political instability (4 PMs in 2 years).", impact: "Invited Ayub Khan, leading to the first military rule.", dp: "His dismissal by Ayub just 20 days after Martial Law showed the Army was the true power." },
-        { title: "37. Ayub Khan (1958-69)", facts: "Basic Democracies. Decade of Development. 1965 War.", reason: "Promised stability and economic growth.", impact: "Industrial growth but increased wealth inequality (22 families).", dp: "The 1965 Tashkent Declaration damaged his image, leading to his downfall." },
-        { title: "38. Yahya Khan & 1971", facts: "1970 elections. Operation Searchlight. Surrender in Dacca.", reason: "Refusal to hand power to Mujibur Rahman.", impact: "Separation of East Pakistan (Bangladesh).", dp: "The 1971 surrender remains the most painful event in Pakistan's history." },
-        { title: "39. Z. Ali Bhutto (1972-77)", facts: "1973 Constitution. Nationalization. Simla Agreement.", reason: "Populist mandate 'Roti, Kapra, Makaan'.", impact: "Modernized state but economic output dropped due to state control.", dp: "He initiated the nuclear program to ensure 'strategic parity' with India." },
-        { title: "40. Zia ul Haq (1977-88)", facts: "Islamization. Afghan Jihad. Hudood Ordinances.", reason: "Gained legitimacy through religion after the coup.", impact: "Society became radicalized; Kalashnikov culture.", dp: "Supporting the Mujahideen against USSR made Pakistan a frontline US ally but brought drugs/arms." },
-        { title: "41. Benazir 1st Term (1988-90)", facts: "First woman PM. Dismissed for corruption.", reason: "Clash with President Ghulam Ishaq Khan and military.", impact: "Political deadlock; dismissal after 20 months.", dp: "Her term faced constant destabilization from Zia-era loyalists." },
-        { title: "42. Nawaz 1st Term (1991-93)", facts: "Privatization. Motorway project. Yellow Cab scheme.", reason: "Focus on economic liberalization and infrastructure.", impact: "Struggle for power led to his dismissal by the President.", dp: "The Supreme Court reinstated him, but the Army forced both him and the President to resign." },
-        { title: "43. Benazir 2nd Term (1994-96)", facts: "Karachi operation. Clash with brother Murtaza.", reason: "Law and order crisis in Sindh.", impact: "Dismissed by her own party's President (Leghari).", dp: "Corruption allegations (Mr. 10 Percent) peaked during this period." },
-        { title: "44. Nawaz 2nd Term (1997-99)", facts: "Nuclear tests (1998). Kargil War. 1999 Coup.", reason: "Conflict with Gen Musharraf over Kargil and command.", impact: "Return of military rule under Musharraf.", dp: "The 1998 tests made Pakistan the first and only Muslim nuclear power." }
+        { id: 33, title: "Jinnah as GG (1947-48)", points: "Refugee fund; UN membership; State Bank.", dp: "His 'Unity, Faith, Discipline' motto stabilized the state in the first year." },
+        { id: 34, title: "Liaqat Ali Khan (1949-51)", points: "Objectives Resolution. Preamble of Constitution.", dp: "Ensured Pakistan would be an Islamic democratic state." },
+        { id: 35, title: "Malik Ghulam Muhammad (1951-55)", points: "Dismissed PM Nazimuddin. Bureaucratic coup.", dp: "Set the precedent for dismissing elected parliaments." },
+        { id: 36, title: "Iskandar Mirza (1955-58)", points: "One Unit Scheme. First Martial Law (1958).", dp: "Invited the Army into politics, leading to Ayub Khan’s coup." },
+        { id: 37, title: "Field Marshall Ayub Khan (1958-69)", points: "Decade of Development. 1965 War.", dp: "Industrialized Pak but increased the wealth gap (22 families)." },
+        { id: 38, title: "Yahya Khan & Bangladesh (1971)", points: "Operation Searchlight. Fall of Dacca.", dp: "Refusal to hand power to Mujibur Rahman led to the 1971 split." },
+        { id: 39, title: "Z. Ali Bhutto (1972-1977)", points: "1973 Constitution. Islamic Summit. Nuclear program.", dp: "Rebuilt national morale after the 1971 disaster." },
+        { id: 40, title: "Zia ul Haq (1977-1988)", points: "Islamization. Afghan Jihad.", dp: "Turned Pakistan into a frontline state against USSR." },
+        { id: 41, title: "Benazir Bhutto 1st Term", points: "First female PM of Muslim world. Clash with GIK.", dp: "Era of political instability and dismissals." },
+        { id: 42, title: "Nawaz Sharif 1st Term", points: "Yellow cab; Motorways; Privatization.", dp: "Shift towards a free-market and infrastructure-heavy economy." },
+        { id: 43, title: "Benazir Bhutto 2nd Term", points: "Clash with brother Murtaza. Corruption charges.", dp: "Dismissal after dismissal slowed national progress." },
+        { id: 44, title: "Nawaz Sharif 2nd Term", points: "Nuclear tests 1998. Kargil War. 1999 Coup.", dp: "Pakistan became a declared nuclear power under his term." }
     ],
     fr: [
-        { title: "45. Relations: USA", facts: "SEATO/CENTO in 50s. Afghan War in 80s. Pressler Amendment.", reason: "Security deterrence for Pak; Anti-Communism for US.", impact: "Billion-dollar aid but reliability issues during wars.", dp: "The 1962 US support for India during the China war shifted Pak towards Beijing." },
-        { title: "46. Relations: USSR", facts: "Tashkent Declaration (1966). Steel Mill (1970s). Afghan War.", reason: "Transactional; cold during most of the Cold War.", impact: "Hostility during the 1980s Afghan Jihad.", dp: "Supporting the Mujahideen in the 80s led to constant border violations by Soviet-backed Kabul." },
-        { title: "47. Relations: Bangladesh", facts: "Recognition in 1974 at OIC summit. Trade agreements.", reason: "Need to normalize after the 1971 split.", impact: "Improved relations in the 80s under Ziaur Rahman.", dp: "The 1974 Simla agreement paved the way for mutual recognition." },
-        { title: "48. Relations: India", facts: "Wars in 48, 65, 71, 99. Indus Water Treaty (1960).", reason: "Kashmir dispute and ideological differences.", impact: "High military spending on both sides.", dp: "The Kashmir issue remains the 'unfinished business of Partition'." },
-        { title: "49. Relations: Afghanistan", facts: "Durand Line dispute. Refugee crisis (3m+). Transit trade.", reason: "Afghanistan's claim on Pakhtoonistan.", impact: "Security spillover and economic burden of refugees.", dp: "Afghanistan was the only country to vote against Pakistan's entry into the UN in 1947." },
-        { title: "50. Relations: UK & Commonwealth", facts: "Colonial links. Withdrawal in 1972; rejoined in 1989.", reason: "Trade and expatriate community (1.5m people).", impact: "Strong educational and administrative legacy.", dp: "The 1972 withdrawal was a protest against the Commonwealth's recognition of Bangladesh." },
-        { title: "51. Relations: China", facts: "KKH highway. All-weather friendship. CPEC ($62bn).", reason: "Shared strategic interests against India.", impact: "China is Pak's most reliable defense and economic partner.", dp: "China's support during the 1965 war proved it was a 'higher than mountains' friend." },
-        { title: "52. Relations: Iran", facts: "First to recognize Pak. Support in 1965 war. RCD (1964).", reason: "Historical and cultural ties.", impact: "Strained post-1979 Iranian Revolution but mostly cordial.", dp: "Iran provided crucial sanctuary for Pakistani aircraft during the 1965 war." },
-        { title: "53. Relations: Muslim World", facts: "OIC founding member. 1974 Lahore Summit. Saudi aid.", reason: "Islamic identity and financial needs.", impact: "Pak provided military training to Gulf states.", dp: "The 1974 summit made Bhutto a global leader of the Third World/Islamic bloc." },
-        { title: "54. Relations: UN", facts: "Joined 1947. Top troop contributor to peacekeeping.", reason: "Platform for Kashmir and global legitimacy.", impact: "Successful mediation in many global conflicts.", dp: "Pakistan has been elected to the Security Council seven times, proving its diplomatic strength." },
-        { title: "55. Nuclear Power", facts: "Program started by Bhutto. Tests in 1998 (Chagai).", reason: "Deterrence against India's 1974/1998 tests.", impact: "Ensured strategic parity and prevented full-scale wars.", dp: "Dr. A.Q. Khan is hailed as the father of the 'Islamic Bomb' that saved Pakistan's sovereignty." }
+        { id: 45, title: "Relations with USA", points: "$1.6bn aid; SEATO/CENTO membership.", dp: "Cold War ally but faced arms embargoes during the 1965/71 wars." },
+        { id: 46, title: "Relations with USSR", points: "Tashkent Declaration. Steel Mills aid.", dp: "Hostile during Afghan war; improved after Soviet withdrawal." },
+        { id: 47, title: "Relations with Bangladesh", points: "1974 recognition at OIC Lahore.", dp: "Slow normalization after the traumatic 1971 separation." },
+        { id: 48, title: "Relations with India", points: "Indus Water Treaty. Kashmir dispute.", dp: "Perpetual state of war and strategic competition." },
+        { id: 49, title: "Relations with Afghanistan", points: "Durand Line; Refugee crisis (3.5M).", dp: "Frontline ally in the Afghan Jihad but faced cross-border issues." },
+        { id: 50, title: "Relations with UK", points: "Commonwealth; Cricket diplomacy.", dp: "Strong colonial heritage and administrative links." },
+        { id: 51, title: "Relations with China", points: "KKH highway; 1965 support.", dp: "All-weather friendship; strategic parity against India." },
+        { id: 52, title: "Relations with Iran", points: "First to recognize Pak; RCD (1964).", dp: "Natural allies through geography and shared religion." },
+        { id: 53, title: "Relations with Muslim World", points: "1974 Summit; Defense training.", dp: "Pakistan acting as the 'Sword of Islam' for the Middle East." },
+        { id: 54, title: "Relations with UN", points: "Top troop contributor. Kashmir resolutions.", dp: "Platform for global recognition and peace efforts." },
+        { id: 55, title: "Pakistan as Nuclear Power", points: "Chagai tests 1998. Response to India.", dp: "Established strategic deterrence in South Asia." }
     ]
 };
 
 const practiceQs = [
-    { q: "Why was the Khilafat Movement founded? [7]", a: "1. Protect Caliphate (Religious duty). 2. Resentment of British WWI policies. 3. Tool for mass political mobilization." },
-    { q: "Was the 1935 Act the main reason for the creation of Pakistan? [14]", a: "Side 1: 1935 Act led to 1937 elections which proved Congress bias. Side 2: Sir Syed's 2-Nation Theory, 1940 Resolution, and Jinnah's leadership. Eval: 1935 Act provided the democratic platform that made Partition a formal demand." }
+    { q: "Why was the Khilafat Movement founded? [7]", a: "1. Protect Caliphate. 2. Post-war resentment. 3. Political mobilization." },
+    { q: "Was Jinnah's role as Governor General successful? [14]", a: "Side 1: Infrastructure, refugees, State Bank. Side 2: Language issue, early death. Eval: Jinnah was the anchor that prevented state collapse." }
 ];
 
+// LIQUID GSAP TRANSITIONS
 function showTab(id, btn) {
-    document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
-    document.querySelectorAll('.nav-link').forEach(b => b.classList.remove('active'));
-    document.getElementById('panel-' + id).classList.add('active');
+    gsap.to('.panel', { opacity: 0, y: 15, duration: 0.2, onComplete: () => {
+        document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
+        document.getElementById('panel-' + id).classList.add('active');
+        gsap.to('#panel-' + id, { opacity: 1, y: 0, duration: 0.4 });
+    }});
+    document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
     btn.classList.add('active');
-    if(id === 'db') renderDB('s1');
-    if(id === 'drills') renderDrills();
+    if(id === 'db') filterSec('s1', document.querySelector('.f-btn'));
+    if(id === 'drill') renderDrills();
 }
 
 function filterSec(s, btn) {
-    document.querySelectorAll('.sub-link').forEach(b => b.classList.remove('active'));
+    document.querySelectorAll('.f-btn').forEach(b => b.classList.remove('active'));
     btn.classList.add('active');
-    renderDB(s);
-}
-
-function renderDB(s) {
-    const list = document.getElementById('db-list');
-    list.innerHTML = topics[s].map((t, i) => `
-        <div class="glass-card">
-            <div class="topic-header" onclick="this.nextElementSibling.classList.toggle('open')">
-                <h3>${t.title}</h3>
-                <span>▾</span>
-            </div>
-            <div class="topic-body">
-                <div class="label">The Facts</div>
-                <div class="desc">${t.facts}</div>
-                <div class="label">Why/Reason</div>
-                <div class="desc">${t.reason}</div>
-                <div class="label">Impact/Result</div>
-                <div class="desc">${t.impact}</div>
-                <div class="dp-pill">Developed Point: ${t.dp}</div>
+    const container = document.getElementById('db-render');
+    container.innerHTML = topics[s].map(t => `
+        <div class="card ch-card">
+            <h3 style="font-size:16px;">${t.id}. ${t.title}</h3>
+            <div class="point-grp">
+                <h4>EXAM POINTS (7/10/14)</h4>
+                <p>${t.points}</p>
+                <div class="dp-text">DEVELOPED POINT: ${t.dp}</div>
             </div>
         </div>
     `).join('');
+    gsap.from('.ch-card', { opacity: 0, x: -20, stagger: 0.05 });
 }
 
 function renderDrills() {
-    document.getElementById('drill-list').innerHTML = practiceQs.map(p => `
-        <div class="glass-card">
-            <h4>${p.q}</h4>
-            <button class="nav-link" style="margin-top:10px" onclick="this.nextElementSibling.classList.toggle('open')">Show Answer Structure</button>
-            <div class="topic-body" style="border-top:1px solid var(--border); margin-top:10px">${p.a}</div>
+    document.getElementById('drill-render').innerHTML = practiceQs.map(d => `
+        <div class="card">
+            <h4 style="margin-bottom:10px">${d.q}</h4>
+            <button class="nav-btn" style="width:auto; padding:5px 10px;" onclick="this.nextElementSibling.style.display='block'">Check Structure</button>
+            <p style="display:none; margin-top:10px; font-size:13px; color:#94a3b8;">${d.a}</p>
         </div>
     `).join('');
 }
 
 function search() {
-    let q = document.getElementById('master-search').value.toLowerCase();
-    document.querySelectorAll('.glass-card').forEach(card => {
+    let q = document.getElementById('search').value.toLowerCase();
+    document.querySelectorAll('.ch-card').forEach(card => {
         card.style.display = card.innerText.toLowerCase().includes(q) ? 'block' : 'none';
     });
 }
 
-// Startup
-showTab('exams', document.querySelector('.nav-link'));
+// BOOT
+showTab('ops', document.querySelector('.nav-btn'));
