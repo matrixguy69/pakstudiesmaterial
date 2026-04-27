@@ -3,55 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MATRIX404 | FULL 55-CHAPTER ARCHIVE</title>
+    <title>MATRIX404 | 2059</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 </head>
 <body>
+    <div class="cursor"></div>
     <div class="mesh-bg"></div>
+
     <div class="glass-shell">
         <header class="header">
-            <h1 class="logo">MATRIX404<span>.HIST</span></h1>
-            <nav class="nav">
-                <button class="nav-btn active" onclick="showTab('ops', this)">EXAM OPS</button>
-                <button class="nav-btn" onclick="showTab('db', this)">DATABASE</button>
-                <button class="nav-btn" onclick="showTab('drill', this)">DRILLS</button>
+            <div class="brand">MATRIX<span>404</span></div>
+            <nav class="nav-bar">
+                <button class="nav-item active" onclick="showTab('ops', this)">EXAM OPS</button>
+                <button class="nav-item" onclick="showTab('db', this)">DATABASE</button>
+                <button class="nav-item" onclick="showTab('drill', this)">PRACTICE</button>
             </nav>
         </header>
 
-        <main class="content-area">
-            <section id="panel-ops" class="panel active">
-                <div class="card glass">
-                    <span class="tag">LEVEL 5 METHOD</span>
-                    <h2>The 14-Mark Protocol</h2>
-                    <p>Follow the <strong>3-3-1 Rule</strong> for Level 5 (13-14 Marks):</p>
-                    <div class="rule-box">
-                        <div class="rule"><span>3 DP</span> Given Reason</div>
-                        <div class="rule"><span>3 DP</span> Other Reasons</div>
-                        <div class="rule"><span>1 DP</span> Fresh Eval</div>
+        <main class="main-content">
+            <section id="tab-ops" class="tab-content active">
+                <div class="card glass glow">
+                    <span class="badge">LEVEL 5 PROTOCOL</span>
+                    <h2>Writing 10/14 Markers</h2>
+                    <p>To hit 13-14 marks, your answer must be a "Developed Point" (DP) structure:</p>
+                    <div class="dp-formula">FACT + REASON + IMPACT = 5-6 Lines per point</div>
+                    <div class="structure-box">
+                        <div class="step"><span>1</span> 3 Developed Points for the Question's Reason.</div>
+                        <div class="step"><span>2</span> 3 Developed Points for Counter-Reasons (Other factors).</div>
+                        <div class="step"><span>3</span> Evaluation: Pick a side + 1 UNIQUE reason not used above.</div>
                     </div>
-                </div>
-                <div class="card glass">
-                    <h3>Paper Pattern (2059/01)</h3>
-                    <ul class="pattern-list">
-                        <li><strong>Section A:</strong> Compulsory (3-5-7-10 structure)</li>
-                        <li><strong>Section B:</strong> Choose 2 of 4 (4-7-14 structure)</li>
-                    </ul>
                 </div>
             </section>
 
-            <section id="panel-db" class="panel">
-                <input type="text" id="search" placeholder="Search 55 Chapters..." onkeyup="search()">
-                <div class="filter-bar">
-                    <button class="f-btn active" onclick="filterSec('s1', this)">SEC 1</button>
-                    <button class="f-btn" onclick="filterSec('s2', this)">SEC 2</button>
-                    <button class="f-btn" onclick="filterSec('s3', this)">SEC 3</button>
-                    <button class="f-btn" onclick="filterSec('fr', this)">RELATIONS</button>
+            <section id="tab-db" class="tab-content">
+                <div class="sticky-controls">
+                    <input type="text" id="dbSearch" placeholder="Search 55 Chapters..." onkeyup="searchDB()">
+                    <div class="filter-pills">
+                        <button class="pill active" onclick="filter('s1', this)">Section 1</button>
+                        <button class="pill" onclick="filter('s2', this)">Section 2</button>
+                        <button class="pill" onclick="filter('s3', this)">Section 3</button>
+                        <button class="pill" onclick="filter('fr', this)">Foreign Rel.</button>
+                    </div>
                 </div>
                 <div id="db-render"></div>
             </section>
 
-            <section id="panel-drill" class="panel">
+            <section id="tab-drill" class="tab-content">
+                <div class="card glass">
+                    <h3>PapaCambridge Practice Vault</h3>
+                    <p>Select a paper pattern to generate drills.</p>
+                </div>
                 <div id="drill-render"></div>
             </section>
         </main>
