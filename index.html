@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MATRIX404 | 2059 GUIDE</title>
+    <title>MATRIX 404 | COMPLETE 55-CHAPTER ARCHIVE</title>
     <link rel="stylesheet" href="style.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 </head>
 <body>
     <div class="mesh-bg"></div>
@@ -14,21 +14,22 @@
         <header class="header">
             <div class="brand">MATRIX<span>404</span></div>
             <nav class="nav">
-                <button class="nav-btn active" onclick="showTab('ops', this)">EXAM OPS</button>
-                <button class="nav-btn" onclick="showTab('db', this)">DATABASE</button>
-                <button class="nav-btn" onclick="showTab('drill', this)">PRACTICE</button>
+                <button class="nav-btn active" onclick="switchTab('ops', this)">EXAM OPS</button>
+                <button class="nav-btn" onclick="switchTab('db', this)">DATABASE</button>
+                <button class="nav-btn" onclick="switchTab('drill', this)">PRACTICE</button>
             </nav>
         </header>
 
         <main class="viewport">
             <section id="tab-ops" class="panel active">
                 <div class="card glass">
-                    <span class="badge">L5 PROTOCOL</span>
-                    <h2>The 14-Mark Blueprint</h2>
-                    <div class="formula">3 DP (GIVEN) + 3 DP (OTHERS) + 1 EVAL = 14/14</div>
-                    <div class="step-box">
-                        <p><strong>Rule 1:</strong> Never list. Every point must explain WHY and the IMPACT.</p>
-                        <p><strong>Rule 2:</strong> Evaluation must be a <em>new</em> perspective, not a summary.</p>
+                    <span class="badge">14-MARKER STRATEGY</span>
+                    <h2>The "3-3-1" Execution</h2>
+                    <div class="formula">FACT + REASON + IMPACT = L5 ANSWER</div>
+                    <div class="step-list">
+                        <div class="step">1. Three DPs for the factor in the question.</div>
+                        <div class="step">2. Three DPs for other relevant factors.</div>
+                        <div class="step">3. Evaluation: A unique 7th point + Final Verdict.</div>
                     </div>
                 </div>
             </section>
@@ -48,8 +49,8 @@
 
             <section id="tab-drill" class="panel">
                 <div class="vault-header">
-                    <h3>50+ Past Paper Questions</h3>
-                    <p>Exam Patterns 2002–2025</p>
+                    <h3>Practice Vault (2002-2025)</h3>
+                    <p>50+ Questions with Mark Scheme Logic</p>
                 </div>
                 <div id="drill-render"></div>
             </section>
