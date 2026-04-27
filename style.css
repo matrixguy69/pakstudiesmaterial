@@ -1,87 +1,55 @@
-:root{
-  --bg:#0f172a;
-  --card:#1e293b;
-  --accent:#38bdf8;
-  --text:#e2e8f0;
+:root {
+    --bg: #0f172a;
+    --card: #1e293b;
+    --header: #1e293b;
+    --accent: #38bdf8;
+    --text: #f8fafc;
+    --text-dim: #94a3b8;
+    --border: #334155;
+    --radius: 12px;
 }
 
-body.light{
-  --bg:#f1f5f9;
-  --card:#ffffff;
-  --accent:#2563eb;
-  --text:#0f172a;
+body.light {
+    --bg: #f1f5f9;
+    --card: #ffffff;
+    --header: #ffffff;
+    --accent: #2563eb;
+    --text: #0f172a;
+    --text-dim: #64748b;
+    --border: #e2e8f0;
 }
 
-body{
-  margin:0;
-  font-family:system-ui;
-  background:var(--bg);
-  color:var(--text);
-}
+* { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+body { font-family: -apple-system, sans-serif; background: var(--bg); color: var(--text); transition: background 0.3s; overflow-x: hidden; }
 
-.header{
-  display:flex;
-  justify-content:space-between;
-  padding:12px;
-}
+.header { display: flex; justify-content: space-between; align-items: center; padding: 16px 20px; background: var(--header); border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 1000; }
+.logo { font-weight: 800; font-size: 1.2rem; letter-spacing: -0.5px; }
+.logo span { color: var(--accent); }
+#theme-toggle { background: none; border: none; font-size: 1.2rem; cursor: pointer; }
 
-.tabs{
-  display:flex;
-  gap:8px;
-  overflow-x:auto;
-  padding:10px;
-}
+.tabs-container { background: var(--header); padding: 8px 12px; border-bottom: 1px solid var(--border); position: sticky; top: 57px; z-index: 999; }
+.tabs { display: flex; gap: 8px; overflow-x: auto; scrollbar-width: none; }
+.tabs::-webkit-scrollbar { display: none; }
+.tab { padding: 8px 16px; border: 1px solid var(--border); border-radius: 20px; background: var(--bg); color: var(--text-dim); white-space: nowrap; font-size: 14px; font-weight: 500; }
+.tab.active { background: var(--accent); color: white; border-color: var(--accent); }
 
-.tab{
-  background:var(--card);
-  border:none;
-  padding:10px 14px;
-  border-radius:12px;
-  cursor:pointer;
-  color:gray;
-}
+.panel { display: none; padding: 16px; animation: fadeIn 0.3s ease; }
+.panel.active { display: block; }
 
-.tab.active{
-  background:var(--accent);
-  color:white;
-}
+.search-bar { width: 100%; padding: 12px; border-radius: var(--radius); border: 1px solid var(--border); background: var(--card); color: var(--text); margin-bottom: 16px; outline: none; }
 
-.panel{display:none;padding:10px}
-.panel.active{display:block}
+.topic-card { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); margin-bottom: 12px; overflow: hidden; }
+.topic-header { padding: 16px; display: flex; justify-content: space-between; align-items: center; cursor: pointer; }
+.topic-header h3 { font-size: 15px; font-weight: 600; width: 80%; }
+.topic-header .year { font-size: 11px; color: var(--accent); font-weight: 700; }
 
-.topic-btn{
-  width:100%;
-  padding:14px;
-  margin-bottom:10px;
-  border:none;
-  border-radius:12px;
-  background:var(--card);
-  cursor:pointer;
-}
+.topic-body { display: none; padding: 0 16px 16px; border-top: 1px solid var(--border); }
+.topic-body.open { display: block; }
 
-.content-box{
-  display:none;
-  padding:10px;
-  background:var(--card);
-  border-radius:12px;
-  margin-bottom:10px;
-}
+.data-section { margin-top: 12px; }
+.data-label { font-size: 10px; font-weight: 700; color: var(--accent); text-transform: uppercase; margin-bottom: 4px; }
+.data-content { font-size: 13.5px; line-height: 1.6; color: var(--text-dim); }
 
-.content-box.open{display:block}
+.dp-box { background: rgba(56, 189, 248, 0.1); border-left: 4px solid var(--accent); padding: 12px; border-radius: 4px; margin-top: 12px; }
 
-.search-box{
-  width:100%;
-  padding:10px;
-  border-radius:10px;
-  border:none;
-  margin-bottom:10px;
-  background:var(--card);
-  color:var(--text);
-}
-
-.q-card{
-  background:var(--card);
-  padding:10px;
-  border-radius:10px;
-  margin-bottom:10px;
-}
+@keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
