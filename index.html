@@ -3,62 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MATRIX404 | 2059 HISTORY</title>
+    <title>MATRIX404 | FULL 55-CHAPTER ARCHIVE</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 </head>
 <body>
-    <div class="cursor"></div>
     <div class="mesh-bg"></div>
-
-    <div class="glass-container">
+    <div class="glass-shell">
         <header class="header">
-            <div class="brand">MATRIX<span>404</span></div>
-            <nav class="nav-pills">
-                <button class="pill active" onclick="showSection('ops', this)">EXAM OPS</button>
-                <button class="pill" onclick="showSection('db', this)">DATABASE</button>
-                <button class="pill" onclick="showSection('drill', this)">DRILLS</button>
+            <h1 class="logo">MATRIX404<span>.HIST</span></h1>
+            <nav class="nav">
+                <button class="nav-btn active" onclick="showTab('ops', this)">EXAM OPS</button>
+                <button class="nav-btn" onclick="showTab('db', this)">DATABASE</button>
+                <button class="nav-btn" onclick="showTab('drill', this)">DRILLS</button>
             </nav>
         </header>
 
-        <main class="viewport">
-            <section id="sec-ops" class="content-sec active">
-                <div class="card glow-border">
-                    <span class="badge">SYLLABUS & PATTERN</span>
-                    <h2>CIE 2059/01 Blueprint</h2>
-                    <div class="pattern-grid">
-                        <div class="p-item"><span>SEC A</span><p>Compulsory (75 Marks Total). 3-5-7-10 structure.</p></div>
-                        <div class="p-item"><span>SEC B</span><p>Choose 2 of 4. 4-7-14 structure.</p></div>
+        <main class="content-area">
+            <section id="panel-ops" class="panel active">
+                <div class="card glass">
+                    <span class="tag">LEVEL 5 METHOD</span>
+                    <h2>The 14-Mark Protocol</h2>
+                    <p>Follow the <strong>3-3-1 Rule</strong> for Level 5 (13-14 Marks):</p>
+                    <div class="rule-box">
+                        <div class="rule"><span>3 DP</span> Given Reason</div>
+                        <div class="rule"><span>3 DP</span> Other Reasons</div>
+                        <div class="rule"><span>1 DP</span> Fresh Eval</div>
                     </div>
                 </div>
-
-                <div class="card">
-                    <span class="badge">LEVEL 5 PROTOCOL</span>
-                    <h3>The 14-Mark Masterclass</h3>
-                    <p>To hit Level 5 (13-14 Marks), follow the <strong>3-3-1 Rule</strong>:</p>
-                    <ul class="ops-list">
-                        <li><strong>Part A:</strong> 3 Developed Points for the given reason.</li>
-                        <li><strong>Part B:</strong> 3 Developed Points for other factors.</li>
-                        <li><strong>Evaluation:</strong> Choose one side + provide a <em>Fresh Reason</em> not mentioned in your points.</li>
+                <div class="card glass">
+                    <h3>Paper Pattern (2059/01)</h3>
+                    <ul class="pattern-list">
+                        <li><strong>Section A:</strong> Compulsory (3-5-7-10 structure)</li>
+                        <li><strong>Section B:</strong> Choose 2 of 4 (4-7-14 structure)</li>
                     </ul>
                 </div>
             </section>
 
-            <section id="sec-db" class="content-sec">
-                <div class="search-bar">
-                    <input type="text" id="chapterSearch" placeholder="Search archive (e.g. 'Mughal', 'Jinnah')..." onkeyup="searchArchive()">
+            <section id="panel-db" class="panel">
+                <input type="text" id="search" placeholder="Search 55 Chapters..." onkeyup="search()">
+                <div class="filter-bar">
+                    <button class="f-btn active" onclick="filterSec('s1', this)">SEC 1</button>
+                    <button class="f-btn" onclick="filterSec('s2', this)">SEC 2</button>
+                    <button class="f-btn" onclick="filterSec('s3', this)">SEC 3</button>
+                    <button class="f-btn" onclick="filterSec('fr', this)">RELATIONS</button>
                 </div>
-                <div class="sec-filters">
-                    <button class="filter-btn active" onclick="filterData('s1', this)">SEC 1</button>
-                    <button class="filter-btn" onclick="filterData('s2', this)">SEC 2</button>
-                    <button class="filter-btn" onclick="filterData('s3', this)">SEC 3</button>
-                    <button class="filter-btn" onclick="filterData('fr', this)">RELATIONS</button>
-                </div>
-                <div id="chapters-list"></div>
+                <div id="db-render"></div>
             </section>
 
-            <section id="sec-drill" class="content-sec">
-                <div id="drill-grid"></div>
+            <section id="panel-drill" class="panel">
+                <div id="drill-render"></div>
             </section>
         </main>
     </div>
