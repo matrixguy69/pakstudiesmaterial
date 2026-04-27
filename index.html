@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pak Studies App</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="header">
+  <h2>📘 Pak Studies App</h2>
+  <button onclick="toggleTheme()">🌙</button>
+</div>
+
+<div class="tabs">
+  <button class="tab active" onclick="switchTab('s1')">Section 1</button>
+  <button class="tab" onclick="switchTab('s2')">Section 2</button>
+  <button class="tab" onclick="switchTab('s3')">Section 3</button>
+  <button class="tab" onclick="switchTab('practice')">Practice</button>
+</div>
+
+<div id="panel-s1" class="panel active">
+  <input class="search-box" placeholder="Search..." oninput="filterTopics('s1',this.value)">
+  <div id="s1-topics"></div>
+</div>
+
+<div id="panel-s2" class="panel">
+  <input class="search-box" placeholder="Search..." oninput="filterTopics('s2',this.value)">
+  <div id="s2-topics"></div>
+</div>
+
+<div id="panel-s3" class="panel">
+  <input class="search-box" placeholder="Search..." oninput="filterTopics('s3',this.value)">
+  <div id="s3-topics"></div>
+</div>
+
+<div id="panel-practice" class="panel">
+  <div id="practice-qs"></div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
